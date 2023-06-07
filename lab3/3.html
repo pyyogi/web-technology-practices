@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<label>Среднее арифметической позитивных: <p id="positive_avg"></p></label>
+
+<label>Среднее арифметической негативных: <p id="negative_avg"></p></label>
+
+<label>Число нулей: <p id="zero_count"></p></label>
+
+<script>
+    var random_array = new Array(15).fill(0);
+
+    function randomIntFromInterval(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    for (let i = 0; i < 15; i++) {
+        random_array[i] = randomIntFromInterval(-10, 30);
+    }
+
+    var positive_sum = 0;
+    var positive_count = 0;
+    var negative_sum = 0;
+    var negative_count = 0;
+    var zero_count = 0;
+
+    for (let i = 0; i < 15; i++) {
+        if (random_array[i] > 0) {
+            positive_count += 1;
+            positive_sum += random_array[i];
+        }
+        if (random_array[i] < 0) {
+            negative_count += 1;
+            negative_sum += random_array[i];
+        }
+
+        if (random_array[i] === 0) {
+            zero_count += 1;
+
+        }
+    }
+    document.getElementById("positive_avg").innerHTML = positive_sum / positive_count;
+    document.getElementById("negative_avg").innerHTML = negative_sum / negative_count;
+    document.getElementById("zero_count").innerHTML = zero_count;
+</script>
+</body>
+</html>

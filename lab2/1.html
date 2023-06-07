@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+</head>
+<body>
+<div class="w-25 mx-auto d-flex flex-column justify-content-center text-center">
+    <label class="label">В синем небе светляки —<br>
+        Не дотянешь к ним руки.<br>
+        А один большой светляк<br>
+        Изогнулся, как червяк.</label>
+    <input class="input" type="text">
+    <label class="result"></label>
+    <button class="btn" onclick=check(0)>Проверить</button>
+
+</div>
+
+<div class="w-25 mx-auto d-flex flex-column justify-content-center text-center">
+    <label class="label">Речка спятила с ума —<br>
+        По домам пошла сама.</label>
+    <input class="input" type="text">
+    <label class="result"></label>
+    <button class="btn" onclick=check(1)>Проверить</button>
+</div>
+<label class = "w-25 mx-auto d-flex flex-column justify-content-center align-center text-center" id="score">Счет: 0</label>
+
+
+<script>
+    inputs = document.getElementsByClassName("input")
+    labels = document.getElementsByClassName("label")
+    btns = document.getElementsByClassName("btn")
+    results = document.getElementsByClassName("result")
+    scoreLabel = document.getElementById("score")
+    const answers = ['звезды и месяц', 'водопровод']
+    const score = [false, false]
+
+    const getScore = (x) => {
+        let r = 0
+        for (let i = 0; i < x.length; i++) {
+            r += x[i]
+        }
+        return r
+    }
+
+    function check(i) {
+        result = inputs[i].value;
+        if (result === answers[i]) {
+            results[i].textContent = "Верно"
+            score[i] = true
+            labels[i].textContent = ""
+            scoreLabel.textContent = "Счет: " + getScore(score)
+        } else {
+            results[i].textContent = "Неверно"
+        }
+    }
+
+</script>
+
+
+</body>

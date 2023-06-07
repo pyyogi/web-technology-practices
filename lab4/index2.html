@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" type="text/css"  rel="stylesheet">
+</head>
+<body>
+    <h1>Расческа для волос _ПЛАСТИК_ЗОЛОТАЯ 18*7см</h1>
+    <img src="http://opt-opt-opt.ru/upload/resize_cache/iblock/0b9/320_320_1/0b933c85e2c5bd1f154fa0c63acfc677.jpg">
+
+    <h4>Описание товара</h4>
+
+    <descr>
+        <p id="name">
+            Расческа для легкого расчесывания волос ТМ ESTHETIC HOUSE
+        </p>
+    </descr>
+
+    <h4>Характеристики товара</h4>
+
+    <charact>
+        <p id="part_number">Артикул К-355047 Расческа для волос</p>
+<!--        <p>Торговая марка PEDISON (КОРЕЯ)</p>-->
+<!--        <p>Размерная группа взрослая</p>-->
+<!--        <p>Производитель -</p>-->
+        <p id="price"></p>
+    </charact>
+
+    <h4>Полное описание товара</h4>
+
+    <full-descr>
+        <p id="desc" >
+            Легкое расчесывание с наименьшими потерями! Расческа с оригинальным дизайном легко справляется с самыми запутанными волосами, не выдирая их. Щетинки расчески имеют уникальную коническую форму, благодаря чему мягко скользят по волосам, разводя их в стороны, а не опуская узелки вниз и не цепляясь за них, как это делают обычные расчески с шариками на концах. Расческа разглаживает кутикулу волос, избавляя их от эффекта «одуванчика» и возвращая блеск.
+        </p>
+    </full-descr>
+
+    <niz>
+        <hr></hr>
+        <p>Все права защищены</p>
+    </niz>
+
+    <script>
+        var item_features = {
+            name: 'Расческа для легкого расчесывания волос ТМ ESTHETIC HOUSE',
+            price: 200,
+            part_number: 'К-355047'
+        }
+
+        item_features.show = function (){
+            document.getElementById('name').innerHTML = item_features.name;
+            document.getElementById('part_number').innerHTML = item_features.part_number;
+
+            if (item_features.name.includes("Расческа")) {
+                item_features.price = item_features.price * 0.9;
+                document.getElementById('price').innerHTML = item_features.price;
+            }else{
+                document.getElementById('price').innerHTML = item_features.price;
+            }
+        }
+        item_features.show();
+
+
+    </script>
+</body>
+</html>

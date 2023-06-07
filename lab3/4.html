@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="count_red"></p>
+<script>
+  let color_array = new Array(1000000).fill(-1);
+  function randomColor() {
+      return Math.floor(Math.random() * 3);
+  }
+  let count_red = 0;
+  for (let i = 0; i < color_array.length; i++) {
+      color_array[i] = randomColor();
+      if (color_array[i] === 0) {
+          count_red += 1
+      }
+  }
+  document.getElementById("count_red").innerHTML = count_red;
+</script>
+</body>
+</html>

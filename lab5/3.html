@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Average Calculation</title>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1>Номер 3: Замена отрицательных элементов в числовом массиве</h1>
+
+    <button type="button" class="btn btn-primary" onclick="MAss()">Сгенерировать</button>
+    <div id="result" class="mt-3"></div>
+    <div id="result2" class="mt-3"></div>
+  </div>
+
+  <script>
+
+    let random_array = new Array(15).fill(0);
+
+    function randomIntFromInterval(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    function MAss(){
+        for (let i = 0; i < 15; i++) {
+        random_array[i] = randomIntFromInterval(-10, 30);
+    }
+        //document.getElementById("random_array").innerHTML = random_array;
+        const positive_array = random_array.slice(0,15);
+
+        for (let i = 0; i < 15; i++) {
+             if (positive_array[i]<0){
+                 positive_array[i] = positive_array[i] * positive_array[i];
+             }
+        }
+        //document.getElementById("positive_array").innerHTML = positive_array;
+        const result = document.getElementById("result")
+        result.innerHTML = random_array
+        const result2 = document.getElementById("result2")
+        result2.innerHTML = positive_array
+    }
+
+
+  </script>
+</body>
+
+</html>

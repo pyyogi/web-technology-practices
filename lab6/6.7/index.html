@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Операции над массивом</title>
+</head>
+<body>
+<div class="container mt-5">
+  <h1 class="text-center">Операции над массивом</h1>
+  <form id="arrayForm">
+    <div class="form-group">
+      <label for="inputNumbers">Введите числа через запятую:</label>
+      <input type="text" class="form-control" id="inputNumbers" name="inputNumbers" placeholder="Например: 1, 2, 3, 4, 5">
+    </div>
+    <button type="button" class="btn btn-primary" id="sumBtn">Суммировать элементы</button>
+    <button type="button" class="btn btn-info" id="filterEvenBtn">Четные элементы</button>
+    <button type="button" class="btn btn-success" id="multiplyBy2Btn">Умножить каждый элемент на 2</button>
+  </form>
+  <div id="result" class="mt-4"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

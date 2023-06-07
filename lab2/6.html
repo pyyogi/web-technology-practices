@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let l = 21
+    const r = []
+    for (let i = 2; i <= l; ++i) {
+        if (r[i] === undefined) {
+            document.write(i, "<br>")
+        }
+        for(let j = i * 2; j <= l; j += i) {
+            r[j] = false
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="style.css" type="text/css"  rel="stylesheet">
+</head>
+<body>
+
+
+  <a href="index.html" >
+    <h4 id="1"></h4>
+    <img src="http://opt-opt-opt.ru/upload/resize_cache/iblock/3da/320_320_1/3daec8f96aa032dc4271ebb3f166fb48.jpg">
+  </a>
+
+  <a href="index2.html">
+    <h4 id="2"></h4>
+    <img src="http://opt-opt-opt.ru/upload/resize_cache/iblock/0b9/320_320_1/0b933c85e2c5bd1f154fa0c63acfc677.jpg">
+  </a>
+
+  <a href="index3.html">
+    <h4 id="3"></h4>
+    <img src="http://opt-opt-opt.ru/upload/resize_cache/iblock/644/320_320_1/644e5c95f9e4d92ea41b75fac4dce4d7.jpg">
+  </a>
+    <script>
+        function Item(name, id) {
+            this.name = name;
+
+            this.giveName = function() {
+                document.getElementById(id).innerHTML = this.name;
+            };
+        }
+
+        let mango = new Item("Шампунь для волос МАНГО Institute-Beaute Mango Rich Protein Hair Shampoo, 500 мл", 1);
+        mango.giveName();
+        let estel = new Item("Расческа для волос _ПЛАСТИК_ЗОЛОТАЯ 18*7см", 2);
+        estel.giveName();
+        let tough = new Item("Бальзам для волос ТВЕРДЫЙ, 70 гр", 3);
+        tough.giveName();
+
+    </script>
+</body>
+</html>

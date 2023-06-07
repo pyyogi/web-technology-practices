@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!--    <p class="random_array"></p>-->
+  <script>
+
+      var random_array = new Array(15).fill(0);
+    function randomIntFromInterval(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+      for (let i = 0; i < 15; i++) {
+          random_array[i] = randomIntFromInterval(-10, 30);
+      }
+      const sum = random_array.reduce((partialSum, a) => partialSum + a, 0);
+      document.write(sum/random_array.length);
+  </script>
+</body>
+</html>

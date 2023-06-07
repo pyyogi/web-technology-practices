@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Тестовые задания</title>
+</head>
+<body>
+<div class="container mt-5">
+  <h1 class="text-center">Тестовые задания</h1>
+  <form id="testForm">
+    <div class="form-group">
+      <label for="question1">1. два плюс два</label>
+      <select class="form-control" id="question1" name="question1">
+        <option value="">Выберите ответ...</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="question2">2. если задать правильный вопрос - будет...</label>
+      <input type="text" class="form-control" id="question2" name="question2" placeholder="Введите ответ...">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Проверить</button>
+  </form>
+
+  <div id="result" class="mt-4"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
